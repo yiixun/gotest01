@@ -1,3 +1,3 @@
-module deskmini/test01/v2
+module github.com/yiixun/gotest01/v2
 
 go 1.22.5
