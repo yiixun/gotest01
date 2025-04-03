@@ -8,7 +8,12 @@ import (
 	"github.com/yiixun/gotest01/v2/pkg/service/transport"
 )
 
-// apexi plays the role for configuration of services registered to apex. so all internal services knows each other.
+// This is a Lookup Config which introduces the structure of the program. All internal services are listed here.
+// It is the high level design/architecture of the program.
+// So, this file is important, not a dirty work.
+// The problem for spring like frameworks are: they introduced too many beans but never check if they are a must.
+
+// apex suggests to program in a good design.
 
 const (
 	// Define all service ids, like in microservice env.

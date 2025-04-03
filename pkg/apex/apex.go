@@ -2,6 +2,7 @@ package apex
 
 import (
 	"errors"
+	"reflect"
 	"sync"
 	"time"
 )
@@ -184,4 +185,10 @@ func WaitUtilAllUp() {
 		}
 		time.Sleep(15 * time.Millisecond)
 	}
+}
+
+// Name get the type of interface using reflect and treat it as registered service name
+func Name(itf any) string {
+	t := reflect.TypeOf(itf)
+	return t.PkgPath() + t.Name()
 }

@@ -18,3 +18,15 @@ func Initialize() {
 	)
 
 }
+
+func Initialize2() {
+	// apex start:
+	apex.Bootstrap()
+
+	// service start
+	apex.Bootup(
+		cooking.NewCookingImpl2,
+		fishing.NewFishingImp2,
+	)
+
+}
