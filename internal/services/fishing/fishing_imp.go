@@ -1,8 +1,8 @@
 package fishing
 
 import (
+	"github.com/yiixun/gotest01/v2/internal/services/apexi"
 	"github.com/yiixun/gotest01/v2/pkg/apex"
-	"github.com/yiixun/gotest01/v2/pkg/service/fishing"
 )
 
 var (
@@ -15,7 +15,7 @@ type FishingImp struct {
 func NewFishingImp() {
 	impl = new(FishingImp)
 
-	apex.Register(fishing.ServiceID, impl)
+	apex.Register(apexi.FishingServiceID, impl)
 }
 
 func (f *FishingImp) ThrowPole(strength int32) {}
